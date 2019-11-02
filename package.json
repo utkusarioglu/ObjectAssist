@@ -1,19 +1,32 @@
 {
-  "name": "object-assist",
+  "name": "@utkusarioglu/object-assist",
   "version": "0.0.1",
   "description": "A global library for some methods to help with dealing js objects",
   "main": "index.js",
-  "author": {
-    "name": "Utku Sarioglu",
-    "email": "utkusarioglu@gmail.com",
-    "url": "http://www.utkusarioglu.com"
-  },
+  "author": "Utku Sarioglu <utkusarioglu@gmail.com> (http://www.utkusarioglu.com)",
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "shx rm -rf _bundles lib lib-esm package-lock.json",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
-    "typescript": "^3.2.2"
-  }
-} 
+    "typescript": "^3.2.2",
+    "jest": "24.9.0",
+    "shx": "^0.3.2",
+    "ts-jest": "24.1.0",
+    "ts-loader": "6.2.1",
+    "typescript-declaration-webpack-plugin": "0.1.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utkusarioglu/ObjectAssist.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utkusarioglu/ObjectAssist/issues"
+  },
+  "homepage": "https://github.com/utkusarioglu/ObjectAssist#readme"
+}

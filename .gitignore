@@ -263,6 +263,11 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 
+#Webpack
+lib
+lib-esm
+_bundles
+
 # Visual Studio 6 build log
 *.plg
 

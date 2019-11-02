@@ -1,5 +1,5 @@
 
-
+// @ts-ignore
 Object.prototype.sniff = function (
     sniffing_path: string | string[],
     absent_func: (last_available_step: any) => any = () => false,
@@ -21,7 +21,7 @@ Object.prototype.sniff = function (
     return present_func(current_step);
 };
 
-
+// @ts-ignore
 Object.prototype.pave = function (
     pave_path: string | string[],
     path_occupied_call: () => any = () => Object,
@@ -68,6 +68,7 @@ Object.prototype.pave = function (
     }
 };
 
+// @ts-ignore
 Object.prototype.is_empty = function() {
     for (const key in this) {
         if (this.hasOwnProperty(key)) {
@@ -77,10 +78,12 @@ Object.prototype.is_empty = function() {
     return true;
 };
 
+// @ts-ignore
 Object.prototype.is_Object = function() {
     return this === Object(this);
 };
 
+// @ts-ignore
 Object.prototype.has_Function = function(func_name: string): boolean {
     return typeof (this as any)[func_name] === "function";
 };
