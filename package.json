@@ -1,0 +1,19 @@
+{
+  "name": "object-assist",
+  "version": "0.0.1",
+  "description": "A global library for some methods to help with dealing js objects",
+  "main": "index.js",
+  "author": {
+    "name": "Utku Sarioglu",
+    "email": "utkusarioglu@gmail.com",
+    "url": "http://www.utkusarioglu.com"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.14",
+    "typescript": "^3.2.2"
+  }
+}
