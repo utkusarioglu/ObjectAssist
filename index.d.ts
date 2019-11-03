@@ -1,4 +1,4 @@
-export declare global {
+declare global {
     interface Object {
         sniff: (path: string | string[], absent_func?: (last_available_step: any) => any, available_func?: (last_available_step: any) => any) => any;
         pave: (path: string | string[], occupied?: () => any, pave_success?: () => {}) => any;
