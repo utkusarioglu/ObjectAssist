@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: __dirname,
         filename: '[name].js',
-        libraryTarget: 'umd',
+        libraryTarget: 'amd',
         library: 'Lib',
         umdNamedDefine: true
     },
@@ -20,7 +20,7 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
           new TypescriptDeclarationPlugin({
-            out: '../index.d.ts'
+            out: 'index.d.ts'
           }),
     ],
     module: {
