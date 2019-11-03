@@ -1,10 +1,10 @@
 var path = require("path");
 var webpack = require("webpack");
-//const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
+const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
 
 module.exports = {
     entry: {
-        'index': './@utkusarioglu/object-assist/index.ts'
+        'index': './src/object-assist.ts'
     },
     mode: "production",
     output: {
@@ -19,9 +19,9 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
-          //new TypescriptDeclarationPlugin({
-          //  out: '../../index.d.ts'
-          //}),
+          new TypescriptDeclarationPlugin({
+            out: '../index.d.ts'
+          }),
     ],
     module: {
         rules: [{

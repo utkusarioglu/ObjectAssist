@@ -1,21 +1,22 @@
 {
   "name": "@utkusarioglu/object-assist",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A global library for some methods to help with dealing js objects",
   "main": "index.js",
   "author": "Utku Sarioglu <utkusarioglu@gmail.com> (http://www.utkusarioglu.com)",
   "scripts": {
-    "clean": "shx rm -rf _bundles lib lib-esm package-lock.json",
+    "clean": "shx rm -rf _bundles lib lib-esm index.d.ts index.js index.js.map package-lock.json",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
     "test": "jest"
   },
   "devDependencies": {
     "@types/node": "^8.0.14",
-    "typescript": "^3.2.2",
-    "jest": "24.9.0",
+    "babel-jest": "23.0.0",
+    "jest": "23.0.0",
     "shx": "^0.3.2",
     "ts-jest": "24.1.0",
     "ts-loader": "6.2.1",
+    "typescript": "^3.2.2",
     "typescript-declaration-webpack-plugin": "0.1.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"

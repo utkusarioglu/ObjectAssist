@@ -35,19 +35,43 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="index.js" />
+    <Content Include="index.js.map" />
     <Content Include="jest.config.js" />
+    <Content Include="lib-esm\extension_functions.js" />
+    <Content Include="lib-esm\extension_functions.js.map" />
+    <Content Include="lib-esm\object-assist.js" />
+    <Content Include="lib-esm\object-assist.js.map" />
+    <Content Include="lib\extension_functions.js" />
+    <Content Include="lib\extension_functions.js.map" />
+    <Content Include="lib\object-assist.js" />
+    <Content Include="lib\object-assist.js.map" />
+    <Content Include="obj\Debug\ObjectAssist.njsproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ObjectAssist.njsprojAssemblyReference.cache" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="index.d.ts">
+    <TypeScriptCompile Include="lib-esm\extension_functions.d.ts" />
+    <TypeScriptCompile Include="lib-esm\object-assist.d.ts" />
+    <TypeScriptCompile Include="lib\extension_functions.d.ts" />
+    <TypeScriptCompile Include="lib\object-assist.d.ts" />
+    <TypeScriptCompile Include="src\extension_functions.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="index.ts">
+    <TypeScriptCompile Include="src\object-assist.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib-esm\" />
+    <Folder Include="lib\" />
+    <Folder Include="obj\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
+    <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

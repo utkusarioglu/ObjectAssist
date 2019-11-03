@@ -1,6 +1,5 @@
 
-// @ts-ignore
-Object.prototype.sniff = function (
+export function sniff_Object(this: any, 
     sniffing_path: string | string[],
     absent_func: (last_available_step: any) => any = () => false,
     present_func: (last_available_step: any) => any = () => true,
@@ -21,8 +20,7 @@ Object.prototype.sniff = function (
     return present_func(current_step);
 };
 
-// @ts-ignore
-Object.prototype.pave = function (
+export function pave_Object(this: any, 
     pave_path: string | string[],
     path_occupied_call: () => any = () => Object,
     path_paved_call: () => any = () => Object,
@@ -59,7 +57,7 @@ Object.prototype.pave = function (
                 }
                 return pave_LastElem(current_step);
             },
-            (paved_leading_path) => {
+            (paved_leading_path: any) => {
                 return pave_LastElem(paved_leading_path);
             },
         );
@@ -68,8 +66,7 @@ Object.prototype.pave = function (
     }
 };
 
-// @ts-ignore
-Object.prototype.is_empty = function() {
+export function is_ObjectEmpty(this: any) {
     for (const key in this) {
         if (this.hasOwnProperty(key)) {
             return false;
@@ -78,12 +75,12 @@ Object.prototype.is_empty = function() {
     return true;
 };
 
-// @ts-ignore
-Object.prototype.is_Object = function() {
+export function is_ObjectObject(this: any) {
     return this === Object(this);
 };
 
-// @ts-ignore
-Object.prototype.has_Function = function(func_name: string): boolean {
+export function has_ObjectFunction(this: any, func_name: string): boolean {
     return typeof (this as any)[func_name] === "function";
 };
+
+
