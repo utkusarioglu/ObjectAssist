@@ -8,7 +8,7 @@ module.exports = {
     },
     mode: "production",
     output: {
-        path: __dirname,
+        path: path.resolve(__dirname, "@utkusarioglu/object-assist"),
         filename: '[name].js',
         libraryTarget: 'amd',
         library: 'Lib',
