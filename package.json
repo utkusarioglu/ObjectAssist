@@ -1,6 +1,6 @@
 {
   "name": "@utkusarioglu/object-assist",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A global library for some methods to help with dealing js objects",
   "main": "index.js",
   "author": "Utku Sarioglu <utkusarioglu@gmail.com> (http://www.utkusarioglu.com)",

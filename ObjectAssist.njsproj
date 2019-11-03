@@ -35,6 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include=".npmignore">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="index.js" />
     <Content Include="index.js.map" />
     <Content Include="jest.config.js" />
@@ -54,7 +57,7 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="interfaces.d.ts" />
+    <TypeScriptCompile Include="index.d.ts" />
     <TypeScriptCompile Include="lib-esm\extension_functions.d.ts" />
     <TypeScriptCompile Include="lib-esm\object-assist.d.ts" />
     <TypeScriptCompile Include="lib\extension_functions.d.ts" />

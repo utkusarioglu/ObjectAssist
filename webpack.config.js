@@ -20,7 +20,7 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
           new TypescriptDeclarationPlugin({
-            out: 'interfaces.d.ts'
+            out: 'index.d.ts'
           }),
     ],
     module: {
