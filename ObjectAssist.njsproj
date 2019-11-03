@@ -54,6 +54,7 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="index.d.ts" />
     <TypeScriptCompile Include="lib-esm\extension_functions.d.ts" />
     <TypeScriptCompile Include="lib-esm\object-assist.d.ts" />
     <TypeScriptCompile Include="lib\extension_functions.d.ts" />
