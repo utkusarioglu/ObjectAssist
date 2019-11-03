@@ -34,9 +34,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="%40utkusarioglu\object-assist\index.js" />
-    <Content Include="%40utkusarioglu\object-assist\index.js.map" />
     <Content Include=".gitignore" />
+    <Content Include="index.js" />
+    <Content Include="index.js.map" />
     <Content Include="jest.config.js" />
     <Content Include="lib-esm\extension_functions.js" />
     <Content Include="lib-esm\extension_functions.js.map" />
@@ -54,7 +54,7 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="%40utkusarioglu\object-assist\index.d.ts" />
+    <TypeScriptCompile Include="interfaces.d.ts" />
     <TypeScriptCompile Include="lib-esm\extension_functions.d.ts" />
     <TypeScriptCompile Include="lib-esm\object-assist.d.ts" />
     <TypeScriptCompile Include="lib\extension_functions.d.ts" />
@@ -67,8 +67,6 @@
     </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="%40utkusarioglu\" />
-    <Folder Include="%40utkusarioglu\object-assist\" />
     <Folder Include="lib-esm\" />
     <Folder Include="lib\" />
     <Folder Include="obj\" />

@@ -8,7 +8,7 @@ module.exports = {
     },
     mode: "production",
     output: {
-        path: path.resolve(__dirname, "@utkusarioglu/object-assist"),
+        path: __dirname,
         filename: '[name].js',
         libraryTarget: 'amd',
         library: 'Lib',
@@ -20,7 +20,7 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
           new TypescriptDeclarationPlugin({
-            out: 'index.d.ts'
+            out: 'interfaces.d.ts'
           }),
     ],
     module: {
