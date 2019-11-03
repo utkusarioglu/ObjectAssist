@@ -62,7 +62,7 @@
     <TypeScriptCompile Include="lib-esm\object-assist.d.ts" />
     <TypeScriptCompile Include="lib\extension_functions.d.ts" />
     <TypeScriptCompile Include="lib\object-assist.d.ts" />
-    <TypeScriptCompile Include="src\extension_functions.ts">
+    <TypeScriptCompile Include="src\c_object-assist.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\object-assist.ts">
