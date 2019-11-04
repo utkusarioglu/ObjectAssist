@@ -53,6 +53,9 @@
     <TypeScriptCompile Include="src\c_object-assist.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\object-assist.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\object-assist.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
