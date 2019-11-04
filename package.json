@@ -3,10 +3,15 @@
   "version": "0.0.10",
   "description": "A global library for some methods to help with dealing js objects",
   "main": "index.js",
-  "author": "Utku Sarioglu <utkusarioglu@gmail.com> (http://www.utkusarioglu.com)",
+  "author": {
+    "name": "Utku Sarioglu",
+    "email": "utkusarioglu@gmail.com",
+    "url": "http://www.utkusarioglu.com"
+  },
   "scripts": {
     "clean": "shx rm -rf _bundles lib lib-esm index.d.ts index.js index.js.map package-lock.json",
-    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
+    "declaration": "dts-bundle --name @utkusarioglu/object-assist --main lib/object-assist.d.ts --out ../index.d.ts",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack && npm run declaration",
     "test": "jest"
   },
   "devDependencies": {
@@ -17,7 +22,7 @@
     "ts-jest": "24.1.0",
     "ts-loader": "6.2.1",
     "typescript": "^3.2.2",
-    "typescript-declaration-webpack-plugin": "0.1.1",
+    "dts-bundle": "0.7.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },

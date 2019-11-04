@@ -1,6 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
-const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
+//const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: __dirname,
         filename: '[name].js',
-        libraryTarget: 'amd',
+        libraryTarget: 'commonjs',
         library: 'Lib',
         umdNamedDefine: true
     },
@@ -18,11 +18,11 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     devtool: 'source-map',
-    plugins: [
-          new TypescriptDeclarationPlugin({
-            out: 'index.d.ts'
-          }),
-    ],
+    //plugins: [
+    //      new TypescriptDeclarationPlugin({
+    //        out: 'index.d.ts'
+    //      }),
+    //],
     module: {
         rules: [{
             test: /\.tsx?$/,
