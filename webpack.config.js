@@ -1,6 +1,5 @@
 var path = require("path");
 var webpack = require("webpack");
-//const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -17,11 +16,6 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     devtool: 'source-map',
-    //plugins: [
-    //      new TypescriptDeclarationPlugin({
-    //        out: 'index.d.ts'
-    //      }),
-    //],
     module: {
         rules: [{
             test: /\.tsx?$/,
