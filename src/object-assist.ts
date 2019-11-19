@@ -29,7 +29,7 @@ declare global {
          * */
         pave: (
             path: string | string[],
-            occupied?: () => any,
+            occupied?: (existing: any) => any,
             pave_success?: () => {},
         ) => any;
 

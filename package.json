@@ -1,6 +1,6 @@
 {
   "name": "@utkusarioglu/object-assist",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A global library for some methods to help with dealing js objects",
   "main": "index.js",
   "author": {
