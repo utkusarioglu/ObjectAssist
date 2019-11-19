@@ -75,7 +75,7 @@ Object.prototype.sniff = function(
 
 Object.prototype.pave = function (
     pave_path: string | string[],
-    path_occupied_call: () => any = () => Object,
+    path_occupied_call: (path_content: any) => any = () => { },
     path_paved_call: () => any = () => Object,
 ): any {
 
@@ -90,7 +90,7 @@ Object.prototype.pave = function (
             elem[last_step] = path_paved_call() || {}; // will cause problems if path_paved_call returns false
             return true;
         } else {
-            const resp = path_occupied_call();
+            const resp = path_occupied_call(elem[last_step]);
             if (resp) { elem[last_step] = resp; }
             return false;
         }
