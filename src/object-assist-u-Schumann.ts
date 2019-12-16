@@ -29,8 +29,8 @@ declare global {
          * */
         pave: (
             path: string | string[],
-            occupied?: () => any,
-            pave_success?: () => any,
+            occupied?: (existing: any) => any,
+            pave_success?: () => {},
         ) => any;
 
         /**
@@ -75,8 +75,8 @@ Object.prototype.sniff = function(
 
 Object.prototype.pave = function (
     pave_path: string | string[],
-    path_occupied_call: () => any = () => Object,
-    path_paved_call: () => any = () => Object,
+    path_occupied_call: (path_content: any) => any = () => { },
+    path_available_call: () => any = () => { },
 ): any {
 
     const leading_steps = Array.isArray(pave_path)
@@ -86,25 +86,36 @@ Object.prototype.pave = function (
     let current_step = this;
 
     const pave_LastElem = (elem: any) => {
+
         if (elem[last_step] === undefined) {
-            elem[last_step] = path_paved_call() || {}; // will cause problems if path_paved_call returns false
+
+            const avail_call_result = path_available_call();
+            elem[last_step] = avail_call_result === undefined
+                ? {}
+                : avail_call_result;
+
             return true;
+
         } else {
-            const resp = path_occupied_call();
-            if (resp) { elem[last_step] = resp; }
+
+            const path_occupied_res = path_occupied_call(elem[last_step]);
+            elem[last_step] = path_occupied_res === undefined
+                ? elem[last_step]
+                : path_occupied_res;
+
             return false;
         }
     };
 
     if (leading_steps.length > 0) {
-        current_step.sniff(leading_steps,
+        return current_step.sniff(leading_steps,
             () => {
                 for (const next_step of leading_steps) {
 
                     (current_step as any)[next_step] =
-                        (current_step as any)[next_step]
-                        ? (current_step as any)[next_step]
-                        : {};
+                        (current_step as any)[next_step] === undefined
+                            ? {}
+                            : (current_step as any)[next_step];
 
                     current_step = (current_step as any)[next_step];
                 }
