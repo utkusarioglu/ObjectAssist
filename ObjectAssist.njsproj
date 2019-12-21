@@ -39,8 +39,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="jest.config.js" />
-    <Content Include="obj\Debug\ObjectAssist.njsproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\ObjectAssist.njsprojAssemblyReference.cache" />
+    <Content Include="LICENSE" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -58,9 +57,6 @@
     </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="obj\" />
-    <Folder Include="obj\Debug\" />
-    <Folder Include="obj\Release\" />
     <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
