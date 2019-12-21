@@ -3,7 +3,7 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: {
-        'index': './src/object-assist.ts'
+        'index': './src/index.ts'
     },
     mode: "production",
     output: {

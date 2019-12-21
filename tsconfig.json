@@ -15,8 +15,8 @@
     "declarationMap": false /* Generates a sourcemap for each corresponding '.d.ts' file. */
   },
   "include": [
-    "src/object-assist.ts",
-    "src/object-assist.test.ts"
+    "src/index.ts",
+    "src/**/*.test.ts"
   ],
   "exclude": [
     "node_modules"
