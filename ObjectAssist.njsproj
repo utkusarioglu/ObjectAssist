@@ -38,8 +38,6 @@
     <Content Include=".npmignore">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="index.js" />
-    <Content Include="index.js.map" />
     <Content Include="jest.config.js" />
     <Content Include="obj\Debug\ObjectAssist.njsproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\ObjectAssist.njsprojAssemblyReference.cache" />
@@ -49,8 +47,10 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="index.d.ts" />
     <TypeScriptCompile Include="src\c_object-assist.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\object-assist.test.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\object-assist.ts">

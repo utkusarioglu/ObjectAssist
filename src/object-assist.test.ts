@@ -45,12 +45,12 @@ test("alter available single path", () => {
 
     const value = "random value";
     const value2 = "lelele";
-    const transmission = { Sender: "App/Presentation/Visual"};
+    let obj: any = {
 
-    let obj: any = {};
+    };
 
     for (var i = 0; i < 4; i++) {
-        obj.pave(transmission.Sender,
+        obj.pave("level1",
             (existing: any) => {
                 existing.push(value2);
                 return existing;
@@ -61,7 +61,7 @@ test("alter available single path", () => {
         )
     }
 
-    expect(obj[transmission.Sender]).toStrictEqual([value, value2, value2, value2])
+    expect(obj.level1).toStrictEqual([value, value2, value2, value2])
 
 });
 
