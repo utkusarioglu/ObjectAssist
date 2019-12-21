@@ -1,6 +1,6 @@
 {
   "name": "@utkusarioglu/object-assist",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "A global library for some methods to help with dealing js objects",
   "main": "index.js",
   "author": {
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "shx rm -rf _bundles lib lib-esm index.d.ts index.js index.js.map package-lock.json",
-    "declaration": "dts-bundle --name @utkusarioglu/object-assist --main lib/index.d.ts --out ../index.d.ts",
+    "declaration": "dts-bundle --name @utkusarioglu/object-assist --main lib/object-assist.d.ts --out ../index.d.ts",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack && npm run declaration",
     "test": "jest",
     "test-": "npm run build & jest",
